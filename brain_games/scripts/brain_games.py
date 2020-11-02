@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Main module."""
+"""Brain-games module."""
 
 from brain_games import cli
 
