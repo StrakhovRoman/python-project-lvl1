@@ -20,8 +20,6 @@ jobs:
       - name: install poetry
         run: pip install poetry
       - name: install dependency
-        run: make install
-      - name: install WPS
-        run: poetry add --dev wemake-python-styleguide  
+        run: make install  
       - name: lint
         run: make lint

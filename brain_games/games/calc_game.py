@@ -1,29 +1,31 @@
 """Brain-calc game."""
 
-from operator import add, mul, sub
-
-from brain_games.generator import generate_number, generate_operator
+import operator
+import random
 
 GAME_RULES = (
     'What is the result of the expression?'
 )
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
 operations = {
-    '-': sub,
-    '+': add,
-    '*': mul,
+    '-': operator.sub,
+    '+': operator.add,
+    '*': operator.mul,
 }
 
 
 def get_correct_answer():
-    number1 = generate_number()
-    number2 = generate_number()
-    operator = generate_operator(('-', '+', '*'))
-    question = '{0} {1} {2}'.format(number1, operator, number2)
-    correct_answer = calculate_expression(operator, number1, number2)
-    return question, str(correct_answer)
+    number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    sign, answer = calculate_expression(number1, number2)
+    question = '{0} {1} {2}'.format(number1, sign, number2)
+    return question, str(answer)
 
 
-def calculate_expression(operator, num1, num2):
-    return operations.get(operator)(num1, num2)
+def calculate_expression(num1, num2):
+    sign = random.choice(('-', '+', '*'))
+    return sign, operations.get(sign)(num1, num2)

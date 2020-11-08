@@ -8,8 +8,7 @@ ROUND_COUNT = 3
 
 
 def play(game_rules, game):
-    cli.welcome_user()
-    user_name = cli.get_user_name()
+    user_name = cli.welcome_user()
     print(game_rules)
     for _ in range(ROUND_COUNT):   # noqa: WPS122
         question, correct_answer = game()

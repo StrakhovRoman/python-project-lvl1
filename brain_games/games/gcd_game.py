@@ -1,18 +1,21 @@
 """Brain-gcd game."""
 
-from brain_games.generator import generate_number
+import random
 
 GAME_RULES = (
     'Find the greatest common divisor of given numbers.'
 )
 
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
 
 def get_correct_answer():
-    number1 = generate_number()
-    number2 = generate_number()
+    number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     question = '{0} {1}'.format(number1, number2)
-    correct_answer = find_greatest_common_divisor(number1, number2)
-    return question, str(correct_answer)
+    answer = find_greatest_common_divisor(number1, number2)
+    return question, str(answer)
 
 
 def find_greatest_common_divisor(num1, num2):

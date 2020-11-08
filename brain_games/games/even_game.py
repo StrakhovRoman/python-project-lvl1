@@ -1,17 +1,19 @@
 """Brain-even game."""
 
-from brain_games.generator import generate_number
+import random
 
 GAME_RULES = (
     'Answer "yes" if a number is even, otherwise answer "no".'
 )
 
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
 
 def get_correct_answer():
-    number = generate_number()
-    question = '{0}'.format(number)
-    correct_answer = 'yes' if is_even(number) else 'no'
-    return question, correct_answer
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    answer = 'yes' if is_even(number) else 'no'
+    return number, answer
 
 
 def is_even(number):
