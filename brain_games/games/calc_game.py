@@ -18,14 +18,14 @@ operations = {
 }
 
 
-def get_correct_answer():
+def get_question_and_answer():
     number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    sign, answer = calculate_expression(number1, number2)
-    question = '{0} {1} {2}'.format(number1, sign, number2)
+    answer, math_operator = get_math_operation_and_operator(number1, number2)
+    question = '{0} {1} {2}'.format(number1, math_operator, number2)
     return question, str(answer)
 
 
-def calculate_expression(num1, num2):
-    sign = random.choice(('-', '+', '*'))
-    return sign, operations.get(sign)(num1, num2)
+def get_math_operation_and_operator(num1, num2):
+    math_operator = random.choice(tuple(operations.keys()))
+    return operations.get(math_operator)(num1, num2), math_operator

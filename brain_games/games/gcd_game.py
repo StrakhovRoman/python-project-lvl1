@@ -10,7 +10,7 @@ MIN_NUMBER = 1
 MAX_NUMBER = 100
 
 
-def get_correct_answer():
+def get_question_and_answer():
     number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     question = '{0} {1}'.format(number1, number2)
