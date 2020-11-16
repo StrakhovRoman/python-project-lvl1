@@ -11,20 +11,20 @@ PROGRESSION_LENGTH = 10
 MIN_STEP = 2
 MAX_STEP = 4
 MAX_PROGRESSION_START_NUMBER = 50
-MAX_PROGRESSION_INDEX = PROGRESSION_LENGTH - 1
 
 
 def get_question_and_answer():
-    progression = get_progression()
-    remove_index = random.randint(MIN_NUMBER, MAX_PROGRESSION_INDEX)
-    remove_number = progression[remove_index]
-    progression[remove_index] = '..'
+    progression = list(map(str, get_progression()))
+    max_progression_index = len(progression) - 1
+    removed_index = random.randint(MIN_NUMBER, max_progression_index)
+    removed_number = progression[removed_index]
+    progression[removed_index] = '..'
     question = ' '.join(progression)
-    return question, remove_number
+    return question, removed_number
 
 
 def get_progression():
     step = random.randint(MIN_STEP, MAX_STEP)
     start = random.randint(MIN_NUMBER, MAX_PROGRESSION_START_NUMBER)
     stop = start + (PROGRESSION_LENGTH * step)
-    return list(map(str, range(start, stop, step)))
+    return range(start, stop, step)
