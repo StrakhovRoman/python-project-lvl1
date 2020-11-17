@@ -7,24 +7,22 @@ GAME_RULES = (
 )
 
 MIN_NUMBER = 0
-PROGRESSION_LENGTH = 10
 MIN_STEP = 2
 MAX_STEP = 4
 MAX_PROGRESSION_START_NUMBER = 50
+PROGRESSION_LENGTH = 10
 
 
 def get_question_and_answer():
-    progression = list(map(str, get_progression()))
-    max_progression_index = len(progression) - 1
-    removed_index = random.randint(MIN_NUMBER, max_progression_index)
+    start = random.randint(MIN_NUMBER, MAX_PROGRESSION_START_NUMBER)
+    step = random.randint(MIN_STEP, MAX_STEP)
+    progression = get_progression(start, step, PROGRESSION_LENGTH)
+    removed_index = random.randint(0, len(progression) - 1)
     removed_number = progression[removed_index]
     progression[removed_index] = '..'
-    question = ' '.join(progression)
-    return question, removed_number
+    return ' '.join(progression), removed_number
 
 
-def get_progression():
-    step = random.randint(MIN_STEP, MAX_STEP)
-    start = random.randint(MIN_NUMBER, MAX_PROGRESSION_START_NUMBER)
-    stop = start + (PROGRESSION_LENGTH * step)
-    return range(start, stop, step)
+def get_progression(start, step, length):
+    stop = start + (length * step)
+    return list(map(str, range(start, stop, step)))
