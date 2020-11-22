@@ -5,7 +5,7 @@ This is collection of math mini-games. In each game you need to give correct ans
 
 Use this simple command to install the package via Git:
 ```
-python -m pip install git+https://github.com/StrakhovRoman/python-project-lvl1.git@722a16dac4a3f3af4e9f7395996914105b9a6f4e
+python -m pip install git+https://github.com/StrakhovRoman/python-project-lvl1.git@f830acab58d9ded121924accf94e3cbca8503c78
 ```
 ***
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/StrakhovRoman/python-project-lvl1/maintainability)
