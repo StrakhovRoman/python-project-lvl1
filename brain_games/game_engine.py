@@ -19,7 +19,7 @@ def run(game):
         else:
             wrong_answer = "'{0}' is wrong answer ;(. Correct answer was '{1}'"
             print(wrong_answer.format(user_answer, correct_answer))
-            print("Let's try again, {0}".format(user_name))
+            print("Let's try again, {0}!".format(user_name))
             break
     else:
         print('Congratulations, {0}!'.format(user_name))
