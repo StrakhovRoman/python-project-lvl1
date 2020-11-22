@@ -2,7 +2,7 @@
 
 import random
 
-GAME_RULES = (
+DESCRIPTION = (
     'What number is missing in the progression?'
 )
 

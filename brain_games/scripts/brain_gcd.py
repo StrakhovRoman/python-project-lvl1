@@ -2,12 +2,12 @@
 
 """Brain-gcd game script."""
 
-from brain_games.game_engine import run_game
-from brain_games.games.gcd_game import GAME_RULES, get_question_and_answer
+from brain_games.game_engine import run
+from brain_games.games import gcd_game
 
 
 def main():
-    run_game(GAME_RULES, get_question_and_answer)
+    run(gcd_game)
 
 
 if __name__ == '__main__':

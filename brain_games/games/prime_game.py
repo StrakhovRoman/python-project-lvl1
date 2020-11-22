@@ -3,7 +3,7 @@
 import math
 import random
 
-GAME_RULES = (
+DESCRIPTION = (
     'Answer "yes" if given number is prime. Otherwise answer "no".'
 )
 

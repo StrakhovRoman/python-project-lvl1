@@ -2,7 +2,7 @@
 
 import random
 
-GAME_RULES = (
+DESCRIPTION = (
     'Answer "yes" if a number is even, otherwise answer "no".'
 )
 

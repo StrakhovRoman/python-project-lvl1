@@ -2,12 +2,12 @@
 
 """Brain-prime game script."""
 
-from brain_games.game_engine import run_game
-from brain_games.games.prime_game import GAME_RULES, get_question_and_answer
+from brain_games.game_engine import run
+from brain_games.games import prime_game
 
 
 def main():
-    run_game(GAME_RULES, get_question_and_answer)
+    run(prime_game)
 
 
 if __name__ == '__main__':

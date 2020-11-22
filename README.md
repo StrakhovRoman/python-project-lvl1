@@ -1,7 +1,14 @@
 # Brain Games #
 ## Five console brain-training mini games
 ***
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+This is collection of math mini-games. In each game you need to give correct answers to three questions.
+
+Use this simple command to install the package via Git:
+```
+python -m pip install git+https://github.com/StrakhovRoman/python-project-lvl1.git@722a16dac4a3f3af4e9f7395996914105b9a6f4e
+```
+***
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/StrakhovRoman/python-project-lvl1/maintainability)
 [![Github Actions Status](https://github.com/StrakhovRoman/python-project-lvl1/workflows/PythonCI/badge.svg)](https://github.com/StrakhovRoman/python-project-lvl1/actions)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)  
 

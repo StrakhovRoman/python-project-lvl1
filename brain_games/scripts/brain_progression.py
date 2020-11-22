@@ -2,12 +2,12 @@
 
 """Brain-progression game script."""
 
-from brain_games.game_engine import run_game
-from brain_games.games.progression import GAME_RULES, get_question_and_answer
+from brain_games.game_engine import run
+from brain_games.games import progression
 
 
 def main():
-    run_game(GAME_RULES, get_question_and_answer)
+    run(progression)
 
 
 if __name__ == '__main__':

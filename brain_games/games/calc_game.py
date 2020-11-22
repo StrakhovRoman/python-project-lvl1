@@ -3,7 +3,7 @@
 import operator
 import random
 
-GAME_RULES = (
+DESCRIPTION = (
     'What is the result of the expression?'
 )
 
@@ -18,12 +18,13 @@ operations = {
 }
 
 
-def get_question_and_answer():
+def get_question_and_answer():   # noqa: WPS210
     number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     math_operator, math_operation = get_math_operation()
     question = '{0} {1} {2}'.format(number1, math_operator, number2)
-    return question, str(math_operation(number1, number2))
+    answer = str(math_operation(number1, number2))
+    return question, answer
 
 
 def get_math_operation():
